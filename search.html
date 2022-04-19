@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Document</title>
+  </head>
+  <body class="searchBody" id="searchBody">
+    <div class="loading__page" id="loading__page"></div>
+
+    <script src="./js/loadingPages.js"></script>
+
+    <header class="search__header" id="search__header">
+      <div class="text">Search for a Location</div>
+
+      <div id="mode__toggle" class="mode__toggle">
+        <i class="far fa-sun mode active"></i>
+        <i class="far fa-moon mode"></i>
+      </div>
+    </header>
+    <div class="overlay" id="overlay"></div>
+    <div class="alert__box alert__box-out no-display" id="alert__box"></div>
+
+    <section class="forecast no-display forecast-out" id="forecast">
+      <main>
+        <i class="fas fa-angle-down drop-arrow" id="drop-arrow"></i>
+
+        <section id="searchForecast" class="currentForecast"></section>
+
+        <section class="currentConditions" id="searchConditions"></section>
+
+        <section id="hourlyForecast" class="hourlyForecast"></section>
+      </main>
+
+      <aside>
+        <div class="daily" id="daily">
+          <div id="dailyForecast__chart" class="dailyForecast__chart">
+            <div class="selectBox" id="selectBox">
+              <select name="chartData" id="chartMenu" class="chartMenu">
+                <option value="temp">Temperature</option>
+                <option value="uvi">UVI</option>
+                <option value="humidity">Humidity</option>
+                <option value="wind_speed">Wind Speed</option>
+              </select>
+            </div>
+
+            <div class="dailyChartBox" id="dailyChartBox"></div>
+          </div>
+          <div id="dailyForecast" class="dailyForecast"></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="searchBar" id="searchBar">
+      <form action="" class="searchBar__form" id="searchBar__form">
+        <i class="fas fa-search" id="search__button"></i>
+        <input
+          type="text"
+          name=""
+          id="searchBar__text"
+          class="searchBar__text"
+          autocomplete="off"
+          placeholder="city, state, country or zip code"
+        />
+        <div class="clearText" id="clearText">x</div>
+      </form>
+    </section>
+
+    <section class="otherLocations none" id="nearbyLocations"></section>
+
+    <section id="currentForecast" class="currentForecast no-display"></section>
+
+    <section class="currentConditions" id="currentConditions"></section>
+
+    <button class="moreInfo no-display" id="moreInfo" role="button">
+      More Details
+    </button>
+
+    <nav class="navbar" id="navbar">
+      <li>
+        <a href="./index.html" id="home__page">
+          <i class="fa-solid fa-house page" id="home__button"></i>
+          <i class="far fa-compass page" id="currentLocation__button"></i>
+        </a>
+      </li>
+      <li class="search__icon">
+        <a href="./search.html">
+          <i class="fa-solid fa-magnifying-glass active"></i>
+        </a>
+      </li>
+      <li id="save__button" class="save__button">
+        <i class="fa-solid fa-floppy-disk page"></i>
+      </li>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0-rc.1/chartjs-plugin-datalabels.min.js"
+      integrity="sha512-+UYTD5L/bU1sgAfWA0ELK5RlQ811q8wZIocqI7+K0Lhh8yVdIoAMEs96wJAIbgFvzynPm36ZCXtkydxu1cs27w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/ae99bc4347.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>

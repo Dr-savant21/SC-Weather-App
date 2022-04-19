@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body id="homeBody">
+    <div class="loading__page" id="loading__page">LOADING...</div>
+
+    <script src="./js/loadingPages.js"></script>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="alert__box alert__box-out no-display" id="alert__box"></div>
+    <header class="home__header" id="home__header">
+      <div class="dateLocation none" id="dateLocation"></div>
+      <div id="mode__toggle" class="mode__toggle">
+        <i class="far fa-sun mode active"></i>
+        <i class="far mode fa-moon"></i>
+      </div>
+    </header>
+
+    <div class="content">
+      <main class="none">
+        <section id="currentForecast" class="currentForecast"></section>
+
+        <section class="currentConditions" id="currentConditions"></section>
+
+        <section id="hourlyForecast" class="hourlyForecast"></section>
+      </main>
+
+      <aside>
+        <section class="daily" id="daily">
+          <div id="dailyForecast__chart" class="dailyForecast__chart">
+            <div class="selectBox" id="selectBox">
+              <select name="chartData" id="chartMenu" class="chartMenu">
+                <option value="temp">Temperature</option>
+                <option value="uvi">UVI</option>
+                <option value="humidity">Humidity</option>
+                <option value="wind_speed">Wind Speed</option>
+              </select>
+            </div>
+
+            <div class="dailyChartBox" id="dailyChartBox"></div>
+          </div>
+
+          <div id="dailyForecast" class="dailyForecast"></div>
+        </section>
+      </aside>
+    </div>
+
+    <nav class="navbar" id="navbar">
+      <li class="home__icons">
+        <a href="./index.html" id="home__page">
+          <i
+            class="fa-solid fa-house-chimney home__icon home"
+            id="home__button"
+          ></i>
+          <i
+            class="far fa-compass home__icon currentLoc active"
+            id="currentLocation__button"
+          ></i>
+        </a>
+      </li>
+      <li>
+        <a href="./search.html">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+      </li>
+      <li id="save__button" class="save__button">
+        <i class="fa-solid fa-floppy-disk page"></i>
+      </li>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0-rc.1/chartjs-plugin-datalabels.min.js"
+      integrity="sha512-+UYTD5L/bU1sgAfWA0ELK5RlQ811q8wZIocqI7+K0Lhh8yVdIoAMEs96wJAIbgFvzynPm36ZCXtkydxu1cs27w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/main.js" type="module"></script>
+    <script
+      src="https://kit.fontawesome.com/ae99bc4347.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
